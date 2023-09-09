@@ -94,7 +94,6 @@ function DateFilter() {
         }
         current.add(1, 'day');
       }
-     
     }
     return results;
   };
@@ -105,7 +104,8 @@ function DateFilter() {
   };
 
   return (
-    <div className='outer'>
+    <div id="outer">
+      <h1>Date Picker</h1>
       <div id="main">
         <div id="calender">
           <DatePicker
@@ -114,7 +114,7 @@ function DateFilter() {
             onChange={(date) => setStartDate(date)}
             dateFormat="yyyy/MM/dd"
             open={true}
-            closeOnSelect={true}  
+            closeOnSelect={true}
           />
           <DatePicker
             className="date-picker"
@@ -126,12 +126,11 @@ function DateFilter() {
           />
         </div>
         <div id="dropdowns">
-          
           <select
             id="dropdown1"
             value={dropdown1Value}
             onChange={handleDropdown1Change}
-            className='dropdown'
+            className="dropdown"
             // size="5"
           >
             <option value="All">All</option>
@@ -143,9 +142,11 @@ function DateFilter() {
             <option value="6">6th</option>
             <option value="7">7th</option>
           </select>
-          <select value={dropdown2Value} 
-            className='dropdown'
-          onChange={handleDropdown2Change} >
+          <select
+            value={dropdown2Value}
+            className="dropdown"
+            onChange={handleDropdown2Change}
+          >
             <option value="Sunday">Sunday</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -154,19 +155,19 @@ function DateFilter() {
             <option value="Friday">Friday</option>
             <option value="Saturday">Saturday</option>
           </select>
-          <select value={dropdown3Value} 
-            className='dropdown'
-          onChange={handleDropdown3Change}>
+          <select
+            value={dropdown3Value}
+            className="dropdown"
+            onChange={handleDropdown3Change}
+          >
             <option value="Month">Month</option>
             <option value="Week">Week</option>
           </select>
-          </div>
-          <br />
-          <button onClick={handleSubmit}>Submit</button>
-       
+        </div>
+        <br />
+        <button onClick={handleSubmit}>Submit</button>
       </div>
       <div>
-       
         <div className="table">
           <table>
             <thead>
